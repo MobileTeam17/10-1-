@@ -31,6 +31,7 @@
 		E9961BE91F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9961BE71F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld */; };
 		E9961BEB1F73C3CB008F29A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */; };
 		E9961BED1F73C569008F29A9 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961BEC1F73C569008F29A9 /* signupViewController.swift */; };
+		FE3B08231F80C87B00B1708E /* ShareBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3B08221F80C87B00B1708E /* ShareBill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		E9961BEC1F73C569008F29A9 /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		ED847818F8CF6B9CA1CBE996 /* Pods-BoWang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoWang.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoWang/Pods-BoWang.release.xcconfig"; sourceTree = "<group>"; };
 		F9B69317BAAF010196DC83B2 /* Pods_BoWang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoWang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3B08221F80C87B00B1708E /* ShareBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareBill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				2D60FC501F7E30850091E85D /* MapViewController.swift */,
 				2D7A95801F7F8F2800D50CD4 /* Message.swift */,
 				E92CFDEF1F7FE53400336714 /* Photo.swift */,
+				FE3B08221F80C87B00B1708E /* ShareBill.swift */,
 			);
 			path = BoWang;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				E92CFDF01F7FE53400336714 /* Photo.swift in Sources */,
 				2D8A54111F7545F5002BDDC2 /* accountBookList.swift in Sources */,
+				FE3B08231F80C87B00B1708E /* ShareBill.swift in Sources */,
 				E9961BEB1F73C3CB008F29A9 /* LoginViewController.swift in Sources */,
 				2D1E659D1F7662DD00AF1ABC /* addNewUserToBook.swift in Sources */,
 				2D8A540F1F75363B002BDDC2 /* billListAndDetail.swift in Sources */,

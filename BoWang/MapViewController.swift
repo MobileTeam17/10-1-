@@ -135,8 +135,20 @@ extension MapViewController: UINavigationControllerDelegate, MFMessageComposeVie
     //override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
             
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+        let fromId = loginName
+        let ref = Database.database().reference().child("message")
+        var values = [String:Any]()
+        if (addressString != "") {
+            values = ["text": addressString,"fromId":fromId,"toId":"jim"]
+            print("fffffffffffff" + fromId!)
+            ref.updateChildValues(values)
+        }
+        
+        
         //set up the connector
-        let str = "10086"
+        let str = "0452660911"
         //create a window to inform the user
         let alertController = UIAlertController(title: "send message", message: "Do you want to send message to \(str) ?", preferredStyle: .alert)
         let cancleAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
@@ -145,7 +157,9 @@ extension MapViewController: UINavigationControllerDelegate, MFMessageComposeVie
             if MFMessageComposeViewController.canSendText() {
                 let controller = MFMessageComposeViewController()
                 //the content of the message
-                controller.body = self.addressString
+                let str = "Hi, I am" + fromId!
+                let str2 = "\(str)  Now, I am in:  \(self.addressString) "
+                controller.body = "\(str)  Now, I am in:  \(self.addressString) "
                 //connection list
                 controller.recipients = [str]
                 //set up the agent
@@ -207,6 +221,7 @@ extension MapViewController: AVAudioPlayerDelegate {
         var values = [String:Any]()
         if (addressString != "") {
             values = ["text": addressString,"fromId":fromId,"toId":"jim"]
+            print("fffffffffffff" + fromId!)
             ref.updateChildValues(values)
         }
        

@@ -157,11 +157,11 @@ extension MapViewController: UINavigationControllerDelegate, MFMessageComposeVie
             if MFMessageComposeViewController.canSendText() {
                 let controller = MFMessageComposeViewController()
                 //the content of the message
-                let str = "Hi, I am" + fromId!
+                let str = "Hi, I am " + fromId!
                 let str2 = "\(str)  Now, I am in:  \(self.addressString) "
                 controller.body = "\(str)  Now, I am in:  \(self.addressString) "
                 //connection list
-                controller.recipients = [str]
+                controller.recipients = ["0452660911"]
                 //set up the agent
                 controller.messageComposeDelegate = self
                 self.present(controller, animated: true, completion: nil)
@@ -244,11 +244,11 @@ extension MapViewController: AVAudioPlayerDelegate {
             if MFMessageComposeViewController.canSendText() {
                 let controller = MFMessageComposeViewController()
                 //the content of the message
-                let str = "Hi, I am" + fromId!
+                let str = "Hi, I am " + fromId!
                 let str2 = "\(str)  Now, I am in:  \(self.addressString) "
                 controller.body = "\(str)  Now, I am in:  \(self.addressString) "
                 //connection list
-                controller.recipients = [str]
+                controller.recipients = ["0452660911"]
                 //set up the agent
                 controller.messageComposeDelegate = self
                 self.present(controller, animated: true, completion: nil)

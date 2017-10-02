@@ -823,7 +823,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hTG-CP-FJu">
-                        <barButtonItem key="leftBarButtonItem" title="map" id="aZd-Db-HsA"/>
+                        <barButtonItem key="leftBarButtonItem" title="map" id="aZd-Db-HsA">
+                            <connections>
+                                <segue destination="iCx-OI-Ire" kind="show" id="scc-LD-O2J"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="add" id="kZc-3l-bT1">
                             <connections>
                                 <segue destination="GOw-ZM-1vm" kind="push" identifier="addBook" id="5nj-f4-W3i"/>
@@ -1061,8 +1065,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VyE-Hg-f3d"/>
-        <segue reference="5nj-f4-W3i"/>
+        <segue reference="hm6-oa-bHA"/>
+        <segue reference="scc-LD-O2J"/>
+        <segue reference="OoT-RX-TzV"/>
         <segue reference="69O-FB-Npu"/>
         <segue reference="7V7-Sp-cwL"/>
     </inferredMetricsTieBreakers>

@@ -48,61 +48,71 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
 
         refresh = UIRefreshControl()
 
-        itemTable2.read { (result, error) in
-            if let err = error {
-                print("ERROR ", err)
-            } else if let items = result?.items {
-                for item in items {
-                    if "\(item["theUser"]!)" == self.loginName! &&
-                    !self.bookIdList.contains("\(item["bookId"]!)"){
-                        self.bookIdList.add("\(item["bookId"]!)")
+        let queue2 = DispatchQueue(label: "com.appcoda.myqueue")
+        queue2.sync {
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            let client = delegate.client
+            itemTable2 = client.table(withName: "book_users")
+            itemTable2.read { (result, error) in
+                if let err = error {
+                    print("ERROR ", err)
+                } else if let items = result?.items {
+                    for item in items {
+                        if "\(item["theUser"]!)" == self.loginName! &&
+                            !self.bookIdList.contains("\(item["bookId"]!)"){
+                            self.bookIdList.add("\(item["bookId"]!)")
 
+                        }
                     }
+                    print("234456677888888", self.bookIdList)
+                    self.tableView.reloadData()
                 }
-                print("234456677888888", self.bookIdList)
-                self.tableView.reloadData()
             }
         }
 
-        itemTable.read { (result, error) in
-           if let err = error {
-                print("ERROR ", err)
-           } else if let items = result?.items {
-                for item in items {
-                    
-                    //print("34343434", "\(item["owner"]!)")
-                    //print("565666565656", "\(item["id"]!)")
-                    if "\(item["owner"]!)" == self.loginName! &&
-                    !self.bookIdList.contains("\(item["id"]!)"){
-                        self.bookIdList.add("\(item["id"]!)")
-                        
+
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            let client = delegate.client
+            itemTable = client.table(withName: "AccountBook")
+            itemTable.read { (result, error) in
+                if let err = error {
+                    print("ERROR ", err)
+                } else if let items = result?.items {
+                    for item in items {
+                        if "\(item["owner"]!)" == self.loginName! &&
+                            !self.bookIdList.contains("\(item["id"]!)"){
+                            self.bookIdList.add("\(item["id"]!)")
+                        }
                     }
+                    print("8888888888888888", self.bookIdList)
+                    self.tableView.reloadData()
                 }
-                print("8888888888888888", self.bookIdList)
-                self.tableView.reloadData()
-            
             }
-        }
-        
 
         getBookList()
 
-    
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refresh
         } else {
             tableView.addSubview(refresh)
         }
         
-        // Refresh data on load
-        self.refreshControl?.beginRefreshing()
-        self.onRefresh(self.refreshControl)
-        
+
         getBookList()
         if (theMessage != ""){
             displayMyAlertMessage(userMessage: theMessage)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewDidLoad()
+    }
+    
+    
+    func refreshData(_ sender: UIRefreshControl!){
+        
+        tableView.reloadData()
     }
     
     func getBookList() {
@@ -127,13 +137,10 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
                 self.tableView.reloadData()
             }
         }
-        self.tableView.reloadData()
         
     }
     
-    
 
-    
     func displayMyAlertMessage(userMessage: String)  {
         let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         

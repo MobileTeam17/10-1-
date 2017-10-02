@@ -53,7 +53,6 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
-        
         list = NSMutableArray()
         tableView.reloadData()
         
@@ -148,13 +147,11 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         }
         
         
-        
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refresh
         } else {
             tableView.addSubview(refresh)
         }
-        
         
         self.refreshData(self.refreshControl)
         self.refreshData(self.refreshControl)
@@ -303,22 +300,11 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         self.list.add(self.dicClient)
         print("whether insert or not : ", list.count)
         print("the list is : ", self.list)
-        //for index in 1...5 {
-        
-        
-        
-        //viewDidLoad()
-        //viewDidLoad()
-            
-        //}
-        
         
         Thread.sleep(forTimeInterval: 2)
 
         viewDidLoad()
-        //tableView.reloadData()
         self.tableView.reloadData()
-        //viewDidLoad()
     }
     
 }

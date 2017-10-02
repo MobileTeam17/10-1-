@@ -140,18 +140,16 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let client = self.list[indexPath.row] as! [String:String]
-        cell.textLabel?.text =  client["label"] as! String
+        cell.textLabel?.text =  "the cost is:  $ \(client["theCost"]!)  "
         
-        let str = "the cost is:  \(client["theCost"]!) $ "
+        let str = " \(client["label"]!)"
         var str2 = "   "+client["createdAt"]!
-        var str3 = "  paid by "+client["spendBy"]!
+        var str3 = " by "+client["spendBy"]!
         
-        str2.remove(at: str2.index(before: str2.endIndex))
-        str2.remove(at: str2.index(before: str2.endIndex))
-        str2.remove(at: str2.index(before: str2.endIndex))
-        str2.remove(at: str2.index(before: str2.endIndex))
-        str2.remove(at: str2.index(before: str2.endIndex))
-        
+
+        for i in 0 ..< 14 {
+            str2.remove(at: str2.index(before: str2.endIndex))
+        }
         cell.detailTextLabel?.text = "\(str) \(str2) \(str3)"
         cell.imageView?.image = UIImage(named: "test1")
         return cell

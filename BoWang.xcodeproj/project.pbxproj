@@ -27,7 +27,6 @@
 		A2D9CBCC1943C2540017F096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D9CBCA1943C2540017F096 /* Main.storyboard */; };
 		A2D9CBCE1943C2540017F096 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D9CBCD1943C2540017F096 /* Images.xcassets */; };
 		A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */; };
-		E90414501F81EB5A00EA61DF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E904144F1F81EB5A00EA61DF /* Launch Screen.storyboard */; };
 		E92CFDF01F7FE53400336714 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CFDEF1F7FE53400336714 /* Photo.swift */; };
 		E9961BE91F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9961BE71F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld */; };
 		E9961BEB1F73C3CB008F29A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */; };
@@ -59,7 +58,6 @@
 		A2D9CBCD1943C2540017F096 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2D9CBE81943D1340017F096 /* BoWang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoWang-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
-		E904144F1F81EB5A00EA61DF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E92CFDEF1F7FE53400336714 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E9961BE81F7382A1008F29A9 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				2D7A95801F7F8F2800D50CD4 /* Message.swift */,
 				E92CFDEF1F7FE53400336714 /* Photo.swift */,
 				FE3B08221F80C87B00B1708E /* ShareBill.swift */,
-				E904144F1F81EB5A00EA61DF /* Launch Screen.storyboard */,
 			);
 			path = BoWang;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 			files = (
 				A2D9CBCC1943C2540017F096 /* Main.storyboard in Resources */,
 				2DC458151F7F42D800B1AE52 /* GoogleService-Info.plist in Resources */,
-				E90414501F81EB5A00EA61DF /* Launch Screen.storyboard in Resources */,
 				A2D9CBCE1943C2540017F096 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

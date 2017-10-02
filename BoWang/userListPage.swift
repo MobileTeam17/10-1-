@@ -82,7 +82,6 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
                 print("the item list is : ", items.count)
                 for item in items {
                     self.dicClient["theUser"] = "\(item["theUser"]!)"
-                    self.dicClient["bookId"] = "\(item["bookId"]!)"
                     
                     if "\(item["bookId"]!)" == self.bookId{
                         
@@ -118,9 +117,7 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
                 print("ERROR ", err)
             } else if let items = result?.items {
                 for item in items {
-                    //self.dicClient["id"] = "\(item["id"]!)"
                     self.dicClient["theUser"] = "\(item["owner"]!)"
-                    //self.dicClient["bookId"] = "\(item["bookId"]!)"
                     
                     if "\(item["owner"]!)" == self.loginName{
                         
